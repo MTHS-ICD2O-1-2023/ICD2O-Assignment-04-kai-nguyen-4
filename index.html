@@ -1,9 +1,69 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
-  </body>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Nachos form with js" />
+  <meta name="author" content="Kai Nguyen" />
+  <meta name="keywords" content="mths, ics2o" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <title>Js form</title>
+</head>
+<body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="./js/script.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Select your style of nachos, with Js</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="page-content">Select your choice of meat</div>
+      <form action="#">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-chicken">
+          <input type="radio" id="option-chicken" class="mdl-radio__button" name="options" value="1" checked>
+          <span class="mdl-radio__label">Chicken</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-beef">
+          <input type="radio" id="option-beef" class="mdl-radio__button" name="options" value="2">
+          <span class="mdl-radio__label">Beef</span>
+        </label>
+        <br />
+        <br />
+        <div class="mdl-layout-spacer"></div>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-guac">
+          <input type="checkbox" id="checkbox-guac" class="mdl-checkbox__input" checked>
+          <span class="mdl-checkbox__label">Guacamole 3.00</span>
+        </label>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-sourcream">
+          <input type="checkbox" id="checkbox-sourcream" class="mdl-checkbox__input" checked>
+          <span class="mdl-checkbox__label">Sour Cream 2.00</span>
+        </label>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-salsa">
+          <input type="checkbox" id="checkbox-salsa" class="mdl-checkbox__input" checked>
+          <span class="mdl-checkbox__label">Salsa 1.00</span>
+        </label>
+        <br />
+        <br />
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="makeReceiptClicked()">
+          Receipt
+        </button>
+      </form>
+      <div class="mdl-layout-spacer"></div>
+      <div class="page-content-answer">
+        <div id="answer"></div>
+      </div>
+    </main>
+  </div>
+</body>
 </html>
